@@ -1,0 +1,13 @@
+[package]
+name = "template"
+version = "0.1.0"
+authors = ["dfirence"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+# Enable the Windows Api Features
+# you want to use once you have downloaded
+# the template
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "0.3.9", features = ["processthreadsapi","winuser", "winbase", "handleapi", "psapi", "synchapi", "errhandlingapi"] }
